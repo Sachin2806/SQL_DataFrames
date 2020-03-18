@@ -1,4 +1,4 @@
-package dataframes_SQL
+package dataframes_SQL_Misc
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
@@ -24,7 +24,7 @@ object ProgramJson1 {
               .read
               .option("multiLine", true)
               .option("inferSchema", true)
-              .json("C:/Users/CSC/workspace/DataFrames/IO/employee.json")
+              .json("C:/Users/CSC/git/SQL_DataFrames/DataFrames/IO/employee.json")
   
   tagsDF.show()
   

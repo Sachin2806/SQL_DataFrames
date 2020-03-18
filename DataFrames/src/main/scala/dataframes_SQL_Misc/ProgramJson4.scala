@@ -1,4 +1,4 @@
-package dataframes_SQL
+package dataframes_SQL_Misc
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
@@ -34,12 +34,7 @@ object ProgramJson4 {
   
   jsonData_1.select("deptno").distinct.show()
   jsonData_1.registerTempTable("employeeTb1")
-  spark.sql("select distinct deptno from employeeTb1").show()
-  
-  
-  
-  
-  
+  spark.sql("select distinct deptno from employeeTb1").show()  
   
   }
 }

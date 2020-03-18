@@ -1,4 +1,4 @@
-package dataframes_SQL
+package dataframes_SQL_Misc
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
