@@ -31,10 +31,9 @@ object ProgramWrite2 {
     val columns = Seq("firstname","middlename","lastname","dob","gender","salary")
     val df = data.toDF(columns:_*)
     
-    df
-    .write
-    .partitionBy("gender","salary")
-    .parquet("C:/Users/CSC/git/SparkSQL/Scala_DataFrames/Files/people.parquet")
+    df.write
+      .partitionBy("gender","salary")
+      .parquet("C:/Users/CSC/git/SparkSQL/Scala_DataFrames/Files/people.parquet")
      
     //Details of options in write like "mode" and "partitionBy"
     //.mode("append") - Program doesnt fail and it appends the data at the end.
