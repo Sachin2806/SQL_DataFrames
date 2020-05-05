@@ -85,10 +85,6 @@ object ProgramDT1 {
                       .add("lastname",StringType))
                       .add("id",IntegerType)
                       .add("salary",DoubleType)
-  
-  
-                      
-    
-    
+      
   }
 }

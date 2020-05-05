@@ -40,7 +40,7 @@ object ProgramDF5 {
     val df = simpleData.toDF("employee_name", "department", "salary")
     df.show()
   
-    //row_number Window Function4
+    //row_number Window Function
     val windowSpec  = Window.partitionBy("department").orderBy("salary")
     df.withColumn("row_number",row_number.over(windowSpec)).show()
     
@@ -74,7 +74,6 @@ object ProgramDF5 {
                   .withColumn("max", max(col("salary")).over(windowSpecAgg))
                   .where(col("row") === 1).select("department","avg","sum","min","max")
                   .show()
-    
     
    }
   
